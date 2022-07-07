@@ -1,36 +1,21 @@
-import './App.css';
+import './Page3.css';
 import './CustomButton.css';
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import Page2 from './Page2'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
 
-class App extends React.Component {
-    //constructor(props) {
-    //    super(props);
-    //    this.state = { isClicked: false };
-    //    this.handleClick = this.handleClick.bind(this);
-    //}
-    handleClick = () => {
-        var planetPage = new Page2() // todo
-        root.render(
-            <React.StrictMode>
-                <Page2 />
-            </React.StrictMode>
-            )
-    }
+class Page3 extends React.Component {
+   
     render() {
         return (
-            <div className="App">
+            <div className="Page3">
                 <header>
 
                 </header>
-                <body className="App-body">
+                <body className="Page3-body">
                     <div>
                         <tr>
                             <td>
-                                <button className="custom-btn btn-1" onClick={this.handleClick}> Planets </button>
+                                <button className="custom-btn btn-1" > Planets </button>
                             </td>
                             <td>
                                 <button className="custom-btn btn-1"> Spaceships </button>
@@ -57,4 +42,4 @@ class App extends React.Component {
     }
 }
 
-export default App;
+export default Page3;
