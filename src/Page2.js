@@ -9,18 +9,17 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 class Page2 extends React.Component {
 
-    constructor(props, category) {
+    constructor(props) {
         super(props);
         this.state = {
             error: false,
             isLoaded: false,
             count: 0,
-            items: [],
-            category: category
+            items: []
         };
     }
     componentDidMount() {
-        fetch("https://swapi.dev/api/planets/")
+        fetch(this.props.url)
             .then(res => res.json())
             .then(
                 (result) => {
@@ -38,14 +37,14 @@ class Page2 extends React.Component {
                 }
             );
     }
-    handleClick() 
+    handleClick(index) 
     {
-
-            root.render(
-                <React.StrictMode>
-                    <Page3 />
-                </React.StrictMode>
-            )
+        var requiredUrl = this.props.url + index + "/"
+        root.render(
+            <body>
+                <Page3 url={requiredUrl}/>
+            </body>
+        )
     }
     
     render() {
@@ -58,7 +57,6 @@ class Page2 extends React.Component {
             return (
                 <div className="Page2">
                     <header>
-
                     </header>
                     <body>
                         <div>
@@ -66,7 +64,7 @@ class Page2 extends React.Component {
                             <div className="Page2-body">
                                 {items.map((item, index) =>
                                     <tr >
-                                        <button className="custom-btn btn-1" onClick={this.handleClick}> {item.name} </button>
+                                        <button className="custom-btn btn-1" onClick={this.handleClick.bind(this, index+1)}> {item.name} </button>
                                     </tr>)
                                 }
                             </div>
