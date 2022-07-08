@@ -1,8 +1,8 @@
-.Page3 {
+.InfoPage {
     text-align: center;
 }
 
-.Page3-body {
+.InfoPage-body {
     background-color: white;
     min-height: 100vh;
     display: flex;

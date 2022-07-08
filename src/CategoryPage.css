@@ -1,8 +1,8 @@
-.App {
+.CategoryPage {
   text-align: center;
 }
 
-.App-body {
+.CategoryPage-body {
   background-color: white;
   min-height: 100vh;
   display: flex;

@@ -1,30 +1,29 @@
-import './App.css';
+import './CategoryPage.css';
 import './CustomButton.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Page2 from './Page2'
+import InstancesPage from './InstancesPage'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-class App extends React.Component {
+class CategoryPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = { isClicked: false };
         this.handleClick = this.handleClick.bind(this);
     }
     handleClick(requiredUrl) {
-        var planetPage = new Page2() // todo
         root.render(
-             <Page2 url = {requiredUrl}/>
+            <InstancesPage url = {requiredUrl}/>
             )
     }
     render() {
         return (
-            <div className="App">
+            <div className="CategoryPage">
                 <header>
 
                 </header>
-                <body className="App-body">
+                <body className="CategoryPage-body">
                     <div>
                         <tr>
                             <td>
@@ -55,4 +54,4 @@ class App extends React.Component {
     }
 }
 
-export default App;
+export default CategoryPage;

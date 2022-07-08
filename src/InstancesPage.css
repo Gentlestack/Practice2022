@@ -1,8 +1,8 @@
-.Page2 {
+.InstancesPage {
     text-align: center;
 }
 
-.Page2-body {
+.InstancesPage-body {
     background-color: white;
     min-height: 100vh;
     display: flex;
